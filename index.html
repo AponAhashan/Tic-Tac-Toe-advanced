@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2D Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-container">
+    <!-- ধাপ ১: হোম স্ক্রিন -->
+    <section id="homeScreen" class="screen">
+      <div class="logo-badge">X / O</div>
+      <h1>Tic Tac Toe</h1>
+      <p class="subtitle">Classic 2D Game created by Apon Ahashan</p>
+      <button id="startBtn" class="btn primary-btn menu-btn" type="button">Start</button>
+    </section>
+
+    <!-- ধাপ ২: মোড সিলেকশন স্ক্রিন -->
+    <section id="modeScreen" class="screen hidden">
+      <h2>Select Mode</h2>
+      <div class="menu-stack">
+        <button id="pvpModeBtn" class="btn primary-btn menu-btn" type="button">1 vs 1</button>
+        <button id="aiModeBtn" class="btn secondary-btn menu-btn" type="button">Play with Computer</button>
+      </div>
+      <button id="backToHomeBtn" class="btn ghost-btn" type="button">← Back</button>
+    </section>
+
+    <!-- ধাপ ৩: AI ডিফিকাল্টি সিলেকশন স্ক্রিন -->
+    <section id="difficultyScreen" class="screen hidden">
+      <h2>Select Difficulty</h2>
+      <div class="menu-stack">
+        <button id="easyModeBtn" class="btn primary-btn menu-btn" type="button">Easy</button>
+        <button id="hardModeBtn" class="btn danger-btn menu-btn" type="button">Hard</button>
+      </div>
+      <button id="backToModeBtn" class="btn ghost-btn" type="button">← Back</button>
+    </section>
+
+    <!-- ধাপ ৪: মূল গেম স্ক্রিন -->
+    <section id="gameScreen" class="screen hidden">
+      <div class="top-bar">
+        <button id="menuBtn" class="btn small-btn secondary-btn" type="button">← Menu</button>
+        <span id="modeBadge" class="mode-badge">1 vs 1</span>
+      </div>
+
+      <div class="scoreboard">
+        <div class="score-box x-score">
+          <span id="labelX">Player X</span>
+          <strong id="scoreX">0</strong>
+        </div>
+        <div class="score-box draw-score">
+          <span>Draw</span>
+          <strong id="scoreDraw">0</strong>
+        </div>
+        <div class="score-box o-score">
+          <span id="labelO">Player O</span>
+          <strong id="scoreO">0</strong>
+        </div>
+      </div>
+
+      <p id="statusText" class="status-text">Player X's Turn</p>
+
+      <div class="board" id="board">
+        <button class="cell" data-index="0" aria-label="Cell 1"></button>
+        <button class="cell" data-index="1" aria-label="Cell 2"></button>
+        <button class="cell" data-index="2" aria-label="Cell 3"></button>
+        <button class="cell" data-index="3" aria-label="Cell 4"></button>
+        <button class="cell" data-index="4" aria-label="Cell 5"></button>
+        <button class="cell" data-index="5" aria-label="Cell 6"></button>
+        <button class="cell" data-index="6" aria-label="Cell 7"></button>
+        <button class="cell" data-index="7" aria-label="Cell 8"></button>
+        <button class="cell" data-index="8" aria-label="Cell 9"></button>
+      </div>
+
+      <div class="controls">
+        <button id="restartBtn" class="btn primary-btn" type="button">Restart Round</button>
+        <button id="resetScoreBtn" class="btn secondary-btn" type="button">Reset Score</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
